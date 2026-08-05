@@ -5,12 +5,13 @@ This module defines the BandName class, which prompts the user for
 their city and pet names, then generates a simple band name.
 """
 
+
 class BandName:
     """
     Stores the city and pet names and formats them as a band name.
     """
 
-    def __init__(self, city_name, pet_name):
+    def __init__(self, city_name: str, pet_name: str):
         """
         Initialize a BandName object.
 
@@ -20,7 +21,7 @@ class BandName:
         self._city_name = city_name
         self._pet_name = pet_name
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Return the formatted band name.
 

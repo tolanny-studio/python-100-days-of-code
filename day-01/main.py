@@ -10,13 +10,12 @@ CITY_NAME_PROMPT = "\nWhat is your city name ? "
 PET_NAME_PROMPT = "\nWhat is your pet name ? "
 
 
-def get_input():
-    # Get and store the city name.
-    # Get and store the pet name.
+def get_input() -> tuple[str, str]:
+    # return city_name and pet_name
     return (validate_input(CITY_NAME_PROMPT), validate_input(PET_NAME_PROMPT))
 
 
-def main():
+def main() -> None:
     """
     Create a band name and display it in green.
 
