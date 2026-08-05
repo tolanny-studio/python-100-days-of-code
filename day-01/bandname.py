@@ -18,8 +18,8 @@ class BandName:
         Initializes the city and
         pet name attributes.
         """
-        self._city_name = city_name
-        self._pet_name = pet_name
+        self.__city_name = city_name
+        self.__pet_name = pet_name
 
     def __str__(self) -> str:
         """
@@ -28,4 +28,4 @@ class BandName:
         Returns:
             str: A string containing the generated band name.
         """
-        return f"\nThe name of your band is {self._city_name.title()} {self._pet_name}"
+        return f"\nThe name of your band is {self.__city_name.title()} {self.__pet_name.title()}"
