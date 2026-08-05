@@ -20,7 +20,7 @@ class BandName:
         """
         Initialize a BandName object.
 
-        Displays a welcome message and initializes the city and
+        Initializes the city and
         pet name attributes.
         """
         print("\nWelcome to the band name generator.")

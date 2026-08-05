@@ -14,6 +14,10 @@ def main():
     generates a band name using the user's input, and prints
     the result to the terminal.
     """
+    
+    #  Displays a welcome message     
+    print("\nWelcome to the band name generator.")
+    
     # Create a BandName object
     band_name = BandName()
 
