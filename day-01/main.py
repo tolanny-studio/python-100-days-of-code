@@ -6,15 +6,14 @@ from termcolor import cprint
 from bandname import BandName
 from validateinput import validate_input
 
+CITY_NAME_PROMPT = "\nWhat is your city name ? "
+PET_NAME_PROMPT = "\nWhat is your pet name ? "
+
 
 def get_input():
     # Get and store the city name.
-    city_name = validate_input("\nWhat is your city name ? ")
-
     # Get and store the pet name.
-    pet_name = validate_input("\nWhat is your pet name ? ")
-
-    return city_name, pet_name
+    return (validate_input(CITY_NAME_PROMPT), validate_input(PET_NAME_PROMPT))
 
 
 def main():
