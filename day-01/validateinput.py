@@ -17,7 +17,7 @@ def validate_input(prompt):
     """
     while True:
         # Read input from the user.
-        _prompt = input(prompt)
+        _prompt = input(prompt).strip()
 
         # Ensure the input has at least three characters.
         if len(_prompt) < MINIMUM_CHARACTER:
