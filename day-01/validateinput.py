@@ -1,5 +1,7 @@
 from termcolor import cprint
 
+MINIMUM_CHARACTER = 3
+
 
 def validate_input(prompt):
     """
@@ -18,7 +20,7 @@ def validate_input(prompt):
         _prompt = input(prompt)
 
         # Ensure the input has at least three characters.
-        if len(_prompt) < 3:
+        if len(_prompt) < MINIMUM_CHARACTER:
             cprint(
                 "\nInvalid input ⛔ Input should be more than 2 characters",
                 "red",
