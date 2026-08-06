@@ -11,15 +11,15 @@ BILL_SPLITTERS = "\nHow many people to split the bill ? "
 
 
 def get_total_bill() -> float:
-    return validate_number(TOTAL_BILL_PROMPT)
+    return validate_number(input(TOTAL_BILL_PROMPT))
 
 
 def get_percentage_tip() -> float:
-    return validate_number(PERCENTAGE_TIP_PROMPT)
+    return validate_number(input(PERCENTAGE_TIP_PROMPT))
 
 
 def get_bill_splitters() -> int:
-    return int(validate_number(BILL_SPLITTERS))
+    return int(validate_number(input(BILL_SPLITTERS)))
 
 
 def main():
