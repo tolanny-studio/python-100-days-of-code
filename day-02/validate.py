@@ -1,4 +1,5 @@
 import logging
+import logging_config
 
 logger = logging.getLogger(__name__)
 
@@ -8,7 +9,7 @@ def validate_number(number: str) -> float:
         try:
             number_ = float(number)
         except ValueError as error:
-            logger.error("\nInvalid input %s", error)
+            logger.warning("\nInvalid input %s", error)
             continue
         else:
             return number_

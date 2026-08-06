@@ -1,5 +1,6 @@
 from termcolor import cprint
 import logging
+import logging_config
 from validate import validate_number
 from tipcalculator import TipCalculator
 
@@ -23,6 +24,7 @@ def get_bill_splitters() -> int:
 
 
 def main():
+    logger.info("Tip calculator started")
     cprint("Welcome to the tip calculator", "light_blue")
     total_bill = get_total_bill()
     percentage_tip = get_percentage_tip()
