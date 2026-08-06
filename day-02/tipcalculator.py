@@ -1,17 +1,48 @@
+"""
+Tip calculator domain model.
+
+This module contains the TipCalculator class, which
+calculates how much each person should pay after
+adding a percentage tip.
+"""
+
+
 class TipCalculator:
-    def __init__(self, total_bill, percentage_tip, bill_splitters):
-        self.__total_bill = total_bill
-        self.__percentage_tip = percentage_tip
-        self.__bill_splitters = bill_splitters
-        self.__payment = 0
+    """
+    Calculate each person's share of a bill including tip.
 
-    def calculate_payment(self) -> str:
-        self.__payment = (
-            (self.__total_bill + ((self.__percentage_tip / 100) * self.__total_bill))
-        ) / self.__bill_splitters
+    Args:
+        total_bill: Total bill amount.
+        percentage_tip: Percentage tip to add.
+        bill_splitters: Number of people sharing the bill.
+    """
 
-        payment_ = round(self.__payment, 2)
-        return str(payment_)
+    def __init__(self, total_bill: float, percentage_tip: float, bill_splitters: int):
+        self.total_bill = total_bill
+        self.percentage_tip = percentage_tip
+        self.bill_splitters = bill_splitters
+
+        """
+        Initialize the calculator with bill details.
+        """
+
+    def calculate_payment(self) -> float:
+        """
+        Calculate the amount each person should pay.
+
+        Returns:
+            float: Individual payment rounded to two decimal places.
+        """
+        # Calculate the total amount including tip.
+        return (
+            (self.total_bill + ((self.percentage_tip / 100) * self.total_bill))
+        ) / self.bill_splitters
 
     def __str__(self):
-        return f"\nEach person should pay ${self.calculate_payment()}"
+        """
+        Return a formatted payment message.
+
+        Returns:
+            str: Human-readable payment summary.
+        """
+        return f"\nEach person should pay " f"${self.calculate_payment():.2f}"
