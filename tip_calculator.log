@@ -1,0 +1,17 @@
+2026-08-06 11:51:34,659 - INFO - __main__ - Tip calculator started
+2026-08-06 11:59:22,500 - INFO - __main__ - Tip calculator started
+2026-08-06 12:00:11,993 - INFO - __main__ - Tip calculator started
+2026-08-06 12:02:20,463 - INFO - __main__ - Tip calculator started
+2026-08-06 12:02:20,463 - WARNING - __main__ - This is a test warning.
+2026-08-06 12:02:20,463 - ERROR - __main__ - This is a test error.
+2026-08-06 12:02:20,463 - INFO - __main__ - Tip calculator started
+2026-08-06 12:04:27,671 - INFO - __main__ - Tip calculator started
+2026-08-06 12:05:14,372 - INFO - __main__ - Tip calculator started
+2026-08-06 12:05:14,372 - WARNING - __main__ - This is a test warning.
+2026-08-06 12:05:14,372 - ERROR - __main__ - This is a test error.
+2026-08-06 12:05:14,373 - INFO - __main__ - Tip calculator started
+2026-08-06 12:05:14,373 - WARNING - __main__ - This is a test warning.
+2026-08-06 12:05:14,373 - ERROR - __main__ - This is a test error.
+2026-08-06 12:09:03,384 - INFO - __main__ - Tip calculator started
+2026-08-06 12:09:03,384 - WARNING - __main__ - This is a test warning.
+2026-08-06 12:09:03,384 - ERROR - __main__ - This is a test error.
