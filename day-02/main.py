@@ -1,7 +1,7 @@
 from termcolor import cprint
 import logging
 import logging_config
-from validate import validate_number
+from validate import validate_number,validate_splitters
 from tipcalculator import TipCalculator
 
 logger = logging.getLogger(__name__)
@@ -32,7 +32,7 @@ def get_percentage_tip() -> float:
 def get_bill_splitters() -> int:
     while True:
         bill_splitters = input(BILL_SPLITTERS_PROMPT)
-        validated_bill_splitters = validate_number(bill_splitters)
+        validated_bill_splitters = validate_splitters(bill_splitters)
         if not validated_bill_splitters:
             continue
         return validated_bill_splitters
