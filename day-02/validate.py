@@ -20,8 +20,7 @@ def validate_number(number: str) -> float | None:
 
     Returns:
         float | None:
-            A validated floating-point number if valid;
-          otherwise None.
+            A validated floating-point number if valid; otherwise None.
     """
     try:
         number_ = float(number)
