@@ -53,20 +53,10 @@ class TreasureIsland:
             break
 
     def game(self):
-        while not self.is_game_over:
-            self.first_stage()
-
+        stages = [self.first_stage, self.second_stage, self.third_stage]
+        for stage in stages:
+            stage()
             if self.is_game_over:
                 break
-
-            self.second_stage()
-
-            if self.is_game_over:
-                break
-
-            self.third_stage()
-
-            if self.is_game_over:
-                break
-
+        if not self.is_game_over:
             cprint("\nYou win! 🌟🌟🌟🌟\n", "light_green")
