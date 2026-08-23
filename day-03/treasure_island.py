@@ -45,7 +45,7 @@ class TreasureIsland:
             self.option = input("\nWhich door blue,red or yellow ? ").lower()
 
             if self.option not in ("r", "red", "blue", "b", "y", "yellow"):
-                cprint("Enter a valid option of blue,re or yellow", "light_red")
+                cprint("Enter a valid option of blue,red or yellow", "light_red")
                 continue
 
             self.check_game_over("r", "red", "b", "blue")
@@ -53,10 +53,15 @@ class TreasureIsland:
             break
 
     def game(self):
-        stages = [self.first_stage, self.second_stage, self.third_stage]
-        for stage in stages:
-            stage()
-            if self.is_game_over:
+        while True:
+            stages = [self.first_stage, self.second_stage, self.third_stage]
+            for stage in stages:
+                stage()
+                if self.is_game_over:
+                    break
+            if not self.is_game_over:
+                cprint("\nYou win! 🌟🌟🌟🌟\n", "light_green")
+
+            replay = input("Do you want to replay ? Yes/No ").lower()
+            if replay not in ("yes", "y"):
                 break
-        if not self.is_game_over:
-            cprint("\nYou win! 🌟🌟🌟🌟\n", "light_green")
