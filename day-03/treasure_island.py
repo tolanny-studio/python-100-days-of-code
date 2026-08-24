@@ -1,54 +1,52 @@
 from termcolor import cprint
 
-
 class TreasureIsland:
 
     def __init__(self):
         self.is_game_over = False
-        self.option = ""
 
     def game_over(self):
         cprint("\nGame Over ⛔\n", "light_red")
         self.is_game_over = True
 
-    def check_game_over(self, *options):
-        if self.option in options:
+    def check_game_over(self,option, *options):
+        if option in options:
             self.game_over()
         else:
             self.is_game_over = False
 
     def first_stage(self):
         while True:
-            self.option = input("\nGo left or right? ").lower()
+            option = input("\nGo left or right? ").lower()
 
-            if self.option not in ("r", "right", "l", "left"):
-                cprint("Enter a valid option of left or right", "light_red")
+            if option not in ("r", "right", "l", "left"):
+                cprint("Enter a valid option of left or right ⛔", "light_red")
                 continue
 
-            self.check_game_over("r", "right")
+            self.check_game_over(option,"r", "right")
             break
 
     def second_stage(self):
         while True:
-            self.option = input("\nDo you want to swim or wait? ").lower()
+            option = input("\nDo you want to swim or wait? ").lower()
 
-            if self.option not in ("s", "swim", "wait", "w"):
-                cprint("Enter a valid option of swim or wait", "light_red")
+            if option not in ("s", "swim", "wait", "w"):
+                cprint("Enter a valid option of swim or wait ⛔", "light_red")
                 continue
 
-            self.check_game_over("s", "swim")
+            self.check_game_over(option,"s", "swim")
 
             break
 
     def third_stage(self):
         while True:
-            self.option = input("\nWhich door blue,red or yellow ? ").lower()
+            option = input("\nWhich door blue,red or yellow ? ").lower()
 
-            if self.option not in ("r", "red", "blue", "b", "y", "yellow"):
-                cprint("Enter a valid option of blue,red or yellow", "light_red")
+            if option not in ("r", "red", "blue", "b", "y", "yellow"):
+                cprint("Enter a valid option of blue,red or yellow ⛔", "light_red")
                 continue
 
-            self.check_game_over("r", "red", "b", "blue")
+            self.check_game_over(option,"r", "red", "b", "blue")
 
             break
 
